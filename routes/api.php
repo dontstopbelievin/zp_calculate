@@ -17,4 +17,5 @@ use App\Http\Controllers\HomeController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('calculate', [HomeController::class, 'calculate']);
 Route::post('calculate', [HomeController::class, 'calculate']);
