@@ -21,7 +21,7 @@ services:
     image: postgres:latest
     container_name: zp_postgres
     restart: always
-    env_file: ./.env
+    env_file: ./.env.example
     ports:
       - 5432:5432
     networks:

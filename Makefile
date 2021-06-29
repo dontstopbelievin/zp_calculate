@@ -4,5 +4,5 @@ build:
 	docker-compose exec zp_app composer install
 	docker-compose exec --user root zp_app chown -R user:www-data storage
 	docker-compose exec --user root zp_app chmod -R 775 storage
-	docker-compose exec zp_app php artisan migrate:fresh --seed
 	docker-compose exec zp_app cp /var/www/.env.example /var/www/.env
+	docker-compose exec zp_app php artisan migrate:fresh --seed
